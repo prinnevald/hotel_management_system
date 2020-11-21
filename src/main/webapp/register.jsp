@@ -5,7 +5,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Registration</title>
-        <link rel="stylesheet" href="style.css">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style2.css">
         <script src="scripts/jquery.min.js"></script>
         <script src="scripts/lodash.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;600;700;900&display=swap" rel="stylesheet">
@@ -67,45 +75,87 @@
             <a href="draft.html">Contacts</a>
         </div>
     </div>
-
+<div class="container">
+    <div class="row text-center alert">
+    <div class="row col-md-6 col-md-offset-3">
+        <div class="panel panel-primary">
+            <div class="panel-heading text-center">
     <div class="title_section">
         <span class="title">Registration</span>
     </div>
-
+            </div>
+            <div class="panel-body">
     <div class="registration">
         <form id="regForm">
-            <input type="text" placeholder="First Name" name="firstname" id="firstname" required> <!-- on same line -->
-            <input type="text" placeholder="Last Name" name="lastname" id="lastname" required> <br>
-            <input type="text" placeholder="Email" name="email" id="email" required> <br>
-            <input type="password" placeholder="Password" name="password" id="password" required> <br>
-            <input type="password" placeholder="Repeat Password" name="reppassword" id="reppassword" required> <br>
-
+            <div class="form-group">
+            <input type="text" class="form-control"placeholder="First Name" name="firstname" id="firstname" required> <!-- on same line -->
+            </div>
+            <div class="form-group">
+            <input type="text" class="form-control" placeholder="Last Name" name="lastname" id="lastname" required> <br>
+            </div>
+            <div class="form-group">
+            <input type="text" class="form-control" placeholder="Email" name="email" id="email" required> <br>
+            </div>
+            <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password" name="password" id="password" required> <br>
+            </div>
+            <div class="form-group">
+            <input type="password"  class="form-control" placeholder="Repeat Password" name="reppassword" id="reppassword" required> <br>
+            </div>
+            <div class="form-group">
             <label for="idType">Choose your Identification Document:</label> <br />
-            <select name="idType" id="idType" required>
+            <select name="idType" class="form-control" id="idType" required>
                 <option value="Passport">Passport</option>
                 <option value="Drivers License">Driver's License</option>
                 <option value="State id">State ID</option>
             </select>
+            </div>
             <br>
-            <input type="text" placeholder="Document Number" name="idNumber" id="idNumber" required> <br>
-            <input type="text" placeholder="Address line 1 (country, city, place)" id="addressLine1" name="addressLine1" required>
+            <div class="form-group">
+            <input type="text" class="form-control" placeholder="Document Number" name="idNumber" id="idNumber" required> <br>
+            </div>
+            <div class="form-group">
+            <input type="text" class="form-control" placeholder="Address line 1 (country, city, place)" id="addressLine1" name="addressLine1" required>
+            </div>
             <br>
-            <input type="text" placeholder="Address line 2 (any additional info)" id="addressLine2" name="addressLine2" > <br>
-            <input type="text" name="mobilePhoneNumber" id="mobilePhoneNumber" placeholder="Mobile Phone Number" pattern="\+[0-9]{11}" required> <br>
-            <input type="text" name="homePhoneNumber" id="homePhoneNumber" placeholder="Home Phone Number" pattern="\+[0-9]{11}"> <br>
-            <input type="date" name="dateOfBirth" id="dateOfBirth" placeholder="yyyy-mm-dd"> <br>
+            <div class="form-group">
+            <input type="text" class="form-control" placeholder="Address line 2 (any additional info)" id="addressLine2" name="addressLine2" > <br>
+            </div>
+            <div class="form-group">
+            <input type="text" class="form-control" name="mobilePhoneNumber" id="mobilePhoneNumber" placeholder="Mobile Phone Number" pattern="\+[0-9]{11}" required> <br>
+            </div>
+            <div class="form-group">
+            <input type="text"  class="form-control" name="homePhoneNumber" id="homePhoneNumber" placeholder="Home Phone Number" pattern="\+[0-9]{11}"> <br>
+            </div>
+            <div class="form-group">
+                <input type="date" class="form-control" name="dateOfBirth" id="dateOfBirth" placeholder="yyyy-mm-dd"> <br>
+            </div>
             <!-- sex -->
-
-            <input type="radio" id="male" name="sex" value="male">
+<div class="form-group">
+    <label for="email">Gender</label>
+    <div>
+            <input type="radio" class="radio-inline" id="male" name="sex" value="male">
             <label for="male">Male</label>
-            <input type="radio" id="female" name="sex" value="female">
+            <input type="radio" class="radio-inline" id="female" name="sex" value="female">
             <label for="female">Female</label>
-            <input type="radio" id="nonbinary" name="sex" value="other">
+            <input type="radio" class="radio-inline" id="nonbinary" name="sex" value="other">
             <label for="nonbinary">Other</label> <br>
-
+    </div>
+</div>
             <input type="submit" id="register_button" value="Register">
         </form>
+    </div>
+                <div class="panel-footer text-right">
+                    <small>  &copy; Hotel Dreamers </small>
+                </div>
         <div class="message">${message}</div>
     </div>
+    </div>
+    </div>
+    </div>
+</div>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>

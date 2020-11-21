@@ -9,7 +9,7 @@ public class CustomerService {
     private static Connection connect(){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            return DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hotel","root","Backtoblack06");
+            return DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/hotel","root","318740-adil7");
         } catch ( Exception e ) {
             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
             System.exit(0);
